@@ -12,5 +12,8 @@ Thumbs.db
 # Never push this directory to the public repo.
 .claude/
 
+# Local docs — personal notes and references, kept out of the public repo.
+docs/
+
 # Local notes (uncomment if you want a private scratch file)
 # NOTES.local.md
