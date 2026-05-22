@@ -15,5 +15,8 @@ Thumbs.db
 # Local docs — personal notes and references, kept out of the public repo.
 docs/
 
+# Local scripts — personal automation helpers, kept out of the public repo.
+scripts/
+
 # Local notes (uncomment if you want a private scratch file)
 # NOTES.local.md
