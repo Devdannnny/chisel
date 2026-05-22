@@ -81,8 +81,13 @@ Full specification: [`skills/prompt-architect/SKILL.md`](skills/prompt-architect
 | Skill | Status | What it does |
 |---|---|---|
 | [`prompt-architect`](skills/prompt-architect/) | **Stable** | Converts rough prompts into structured PAS-format prompts. |
-| [`frontend`](skills/frontend/) | In development | Frontend engineering patterns (React, components, accessibility). |
+| [`frontend/next`](skills/frontend/next/) | **Stable** | Production-grade Next.js UI with opinionated, anti-AI-slop design rules. |
+| [`frontend/react`](skills/frontend/react/) | **Stable** | Production-grade React UI (Vite, CRA, non-Next) — same design language as `frontend/next`. |
+| [`frontend/flutter`](skills/frontend/flutter/) | **Stable** | Production-grade Flutter mobile UI (Material 3 + Cupertino, adaptive). |
+| [`frontend/react-native`](skills/frontend/react-native/) | **Stable** | Production-grade React Native (Expo) mobile UI. |
 | [`backend`](skills/backend/) | In development | Backend engineering patterns (APIs, services, data modeling). |
+
+Each `frontend/*` skill includes a **pre-install questionnaire** (`questionnaire.md`) that calibrates output to your stack, brand, and skill level. See [`skills/frontend/README.md`](skills/frontend/README.md) for an overview of the frontend skill family.
 
 Every skill is plain markdown. There is no build step, no dependency graph, and no runtime requirement beyond the agent you choose to load it into.
 
