@@ -1,0 +1,16 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*~
+
+# Claude Code — local agent config, personal skills, and settings.
+# Never push this directory to the public repo.
+.claude/
+
+# Local notes (uncomment if you want a private scratch file)
+# NOTES.local.md
