@@ -87,7 +87,11 @@ Full specification: [`skills/prompt-architect/SKILL.md`](skills/prompt-architect
 | [`frontend/react-native`](skills/frontend/react-native/) | **Stable** | Production-grade React Native (Expo) mobile UI. |
 | [`backend`](skills/backend/) | In development | Backend engineering patterns (APIs, services, data modeling). |
 
-Each `frontend/*` skill includes a **pre-install questionnaire** (`questionnaire.md`) that calibrates output to your stack, brand, and skill level. See [`skills/frontend/README.md`](skills/frontend/README.md) for an overview of the frontend skill family.
+Each `frontend/*` skill:
+- Includes a **pre-install questionnaire** (`questionnaire.md`) that calibrates output to your stack, brand, and skill level.
+- Inherits the canonical design language from [`skills/frontend/shared-rules.md`](skills/frontend/shared-rules.md) — composition, brand, typography, color, hero discipline, motion, anti-patterns, litmus checks. Each sub-skill adds only platform-specific code patterns and idioms on top.
+
+See [`skills/frontend/README.md`](skills/frontend/README.md) for an overview of the frontend skill family.
 
 Every skill is plain markdown. There is no build step, no dependency graph, and no runtime requirement beyond the agent you choose to load it into.
 
