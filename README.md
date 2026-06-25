@@ -31,7 +31,7 @@ The structure stays the same. The depth scales with the task.
 - [FAQ](#faq)
 - [Contributing](#contributing)
 - [License](#license)
-- [Author](#author)
+- [Authors](#authors)
 
 ---
 
@@ -299,10 +299,16 @@ Contributions are welcome — especially new skills, refinements to PAS, and rea
 
 ---
 
-## Author
+## Authors
 
 **Daniel Dabiri** — Tech Co-Founder | AI/ML Engineer | Scaling businesses with Custom LLMs & Multi-Agent Systems
 
 - GitHub: [@Devdannnny](https://github.com/Devdannnny)
 - LinkedIn: [devdannny](https://www.linkedin.com/in/devdannny/)
 - Email: [devdannny@gmail.com](mailto:devdannny@gmail.com)
+
+**David Akinfenwa** — Full Stack Engineer & Product Manager | AI/ML Engineer | Scaling businesses with Custom LLMs & Multi-Agent Systems
+
+- GitHub: [@davidakinfenwa](https://github.com/davidakinfenwa)
+- LinkedIn: [david-akinfenwa](https://www.linkedin.com/in/david-akinfenwa-mobile-engineer)
+- Email: [davidkayode50@gmail.com](mailto:davidkayode50@gmail.com)
