@@ -7,6 +7,67 @@ description: Activate when building Flutter mobile UI — iOS, Android, or both.
 
 Production-grade, distinctive Flutter UI. Opinionated, brand-correct, platform-aware. Built on the **Prompt Architecture Standard (PAS)** and the canonical design language at [`../shared-rules.md`](../shared-rules.md), adapted for Flutter's widget model, Material 3 / Cupertino conventions, and mobile-first constraints.
 
+## Table of Contents
+
+1. [Layer Architecture](#layer-architecture)
+2. [Pre-flight Checklist](#pre-flight-checklist)
+3. [Clean Architecture & DDD Principles](#clean-architecture--ddd-principles)
+4. [Domain Layer (Pure Business Logic)](#domain-layer-pure-business-logic)
+5. [Data Layer (REST + WebSocket)](#data-layer-rest--websocket)
+6. [Presentation Layer (UI/UX)](#presentation-layer-uiux)
+7. [Theming & Design Tokens](#theming--design-tokens)
+8. [Typography Hierarchy](#typography-hierarchy)
+9. [Animation & Motion Design](#animation--motion-design)
+10. [Real-Time Communication (WebSocket)](#real-time-communication-websocket)
+11. [Testing Strategy (TDD)](#testing-strategy-tdd)
+12. [Business Layer Patterns](#business-layer-patterns)
+13. [CI/CD Pipeline](#cicd-pipeline)
+14. [App Store Deployment Automation](#app-store-deployment-automation)
+15. [Success Criteria](#success-criteria)
+
+---
+
+## Layer Architecture
+
+Your project structure aligns with **Clean Architecture**:
+
+```
+lib/
+├─ presentation/          # UI Layer (Screens, Widgets, State)
+│  ├─ screens/           # Full-screen UI components
+│  ├─ widgets/           # Reusable, themed widgets (animated, composable)
+│  ├─ cubits/            # Cubit state management (simple state)
+│  ├─ blocs/             # BLoC state management (complex flows)
+│  └─ theme/             # ThemeData, ThemeExtensions, Animation configs
+├─ domain/               # Business Logic (Pure Dart, no dependencies)
+│  ├─ entities/          # Core business objects (Staff, Service, etc.)
+│  ├─ repositories/      # Abstract contracts (no implementation)
+│  ├─ use_cases/         # Single responsibility business workflows
+│  └─ events/            # Domain events (for WebSocket, event sourcing)
+├─ data/                 # I/O Layer (Firebase, WebSocket, Cache)
+│  ├─ sources/           # Remote (Firebase, REST) & Local (Hive, SharedPrefs)
+│  ├─ repositories/      # Concrete implementations
+│  ├─ models/            # Serializable models (from JSON)
+│  ├─ websocket/         # WebSocket service & event handling
+│  └─ dtos/              # Data Transfer Objects
+├─ business/             # Project-Specific Logic (Services, Flows)
+│  ├─ models/            # Business domain models
+│  ├─ cubits/            # Business-specific Cubits
+│  └─ services/          # Orchestration layer
+├─ core/                 # Shared Infrastructure
+│  ├─ theme/             # Global theme setup (light/dark, tokens)
+│  ├─ constants/         # App constants, URLs, timeouts
+│  ├─ di/                # Dependency Injection setup
+│  ├─ utils/             # Utilities (validators, formatters, helpers)
+│  ├─ extensions/        # Dart extensions (on String, BuildContext, etc.)
+│  └─ widgets/           # Base/primitive widgets (gaps, scaffolds)
+└─ startup/              # App Initialization
+   ├─ bootstrap.dart     # DI, Firebase setup, app runner
+   └─ app.dart           # Root MaterialApp with theming
+```
+
+---
+
 ## Pre-flight (run BEFORE writing any code)
 
 1. **READ [`../shared-rules.md`](../shared-rules.md) FIRST.** Canonical design language.
