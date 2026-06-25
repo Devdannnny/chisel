@@ -1,4 +1,4 @@
-# Pre-Install Questionnaire — Frontend / Flutter
+# Pre-Install Questionnaire — Flutter
 
 Answer these before invoking the skill. Output quality scales directly with how completely you answer.
 
@@ -44,18 +44,18 @@ Answer these before invoking the skill. Output quality scales directly with how 
 - Cupertino (iOS-native feel)
 - Custom design system (you have one)
 
-**7. State management** (default: **Riverpod**)
-- Riverpod (recommended for new projects)
-- Provider
-- Bloc / Cubit
-- GetX
-- setState only (for very small apps)
+**7. State management** (default: **Bloc / Cubit**)
+- Bloc / Cubit (recommended for this codebase)
+- Provider (optional — typically for snapshot caches / notifiers)
+- Riverpod (optional)
+- GetX (optional)
+- setState only (only for very small widgets)
 - Other
 
-**8. Routing** (default: **go_router**)
-- go_router (recommended)
+**8. Routing** (default: **auto_route**)
+- auto_route (recommended for this codebase)
+- go_router (optional)
 - Navigator 1.0 (legacy)
-- auto_route
 - Other
 
 **9. Animation approach** (default: **flutter_animate for composition, AnimationController for fine control**)
@@ -98,8 +98,8 @@ Answer these before invoking the skill. Output quality scales directly with how 
 
 ## Section 4 — Design preferences
 
-**16. Brightness mode** (default: **both light and dark, both polished**)
-- Both (recommended)
+**16. Theme modes** (default: **System (supports Light + Dark)**)
+- System (supports Light + Dark) (recommended)
 - Light only
 - Dark only
 
@@ -136,10 +136,10 @@ Answer these before invoking the skill. Output quality scales directly with how 
 ## Defaults applied if unanswered
 
 - Flutter latest stable, Material 3 cross-platform
-- Riverpod + go_router
+- Bloc/Cubit + auto_route
 - `flutter_animate` for motion, `cached_network_image` for images, `google_fonts` for typography
 - Non-default `ColorScheme.fromSeed` (warm terracotta seed)
-- Both light + dark themes polished
+- ThemeMode.system (light + dark both polished)
 - Intermediate codebase level
 - Phone primary, tablet responsive
 - 60fps target on mid-range
