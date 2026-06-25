@@ -3,7 +3,7 @@
 > Engineering-grade prompt architecture for AI agents.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/Skills-1%20stable%20%7C%202%20in%20development-blue)](skills/)
+[![Skills](https://img.shields.io/badge/Skills-6%20stable%20%7C%201%20in%20development-blue)](skills/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
 Chisel is an open-source framework for turning rough, unstructured intent into prompts that AI agents can actually execute. It is built around the **Prompt Architecture Standard (PAS)** — a single, scalable framework that produces consistent results across creative writing, technical tasks, and high-stakes agentic workflows.
@@ -85,6 +85,7 @@ Full specification: [`skills/prompt-architect/SKILL.md`](skills/prompt-architect
 | [`frontend/react`](skills/frontend/react/) | **Stable** | Production-grade React UI (Vite, CRA, non-Next) — same design language as `frontend/next`. |
 | [`frontend/flutter`](skills/frontend/flutter/) | **Stable** | Production-grade Flutter mobile UI (Material 3 + Cupertino, adaptive). |
 | [`frontend/react-native`](skills/frontend/react-native/) | **Stable** | Production-grade React Native (Expo) mobile UI. |
+| [`seo-next`](skills/seo-next/) | **Stable** | On-page + technical SEO for Next.js (App/Pages Router) — audits and implements to a 100/100 rubric. Pairs with `frontend/next`. |
 | [`backend`](skills/backend/) | In development | Backend engineering patterns (APIs, services, data modeling). |
 
 Each `frontend/*` skill:
@@ -262,7 +263,8 @@ The full skill includes more worked examples and edge-case handling — see [`sk
 ## Roadmap
 
 - [x] `prompt-architect` — core PAS skill (stable).
-- [ ] `frontend` — React, accessibility, state management patterns.
+- [x] `frontend` — Next.js, React, Flutter, and React Native UI skills (stable).
+- [x] `seo-next` — technical + on-page SEO for Next.js (stable).
 - [ ] `backend` — API design, service boundaries, data modeling.
 
 Have an idea for a new skill? [Open an issue](https://github.com/Devdannnny/chisel/issues).
